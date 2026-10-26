@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Picture Puzzle"
+description = "A playful browser puzzle game that turns a user's uploaded picture into a customizable jigsaw puzzle. Players can choose difficulty, shuffle pieces, solve with drag-and-drop, and celebrate completion."
+version = "1.0.0"
+id = "artifacts/picture-puzzle"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24888
+
+[services.development]
+run = "pnpm --filter @workspace/picture-puzzle run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/picture-puzzle", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/picture-puzzle/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24888"
+BASE_PATH = "/"
