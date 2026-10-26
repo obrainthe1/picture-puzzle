@@ -2,7 +2,11 @@
 
 **Look closely. Move the pieces. Complete the picture.**
 
-Picture Puzzle is a web-based puzzle game project built with React, TypeScript, and Vite. This repository contains the app source along with the supporting workspace files used during development.
+Picture Puzzle is a web-based puzzle game built with React, TypeScript, and Vite. Turn images into puzzles and challenge your problem-solving skills.
+
+🌐 **Play the live game:** [picture-to-puzzle.netlify.app](https://picture-to-puzzle.netlify.app)
+
+This repository contains the app source along with the supporting workspace files used during development.
 
 ## ✨ Project
 
